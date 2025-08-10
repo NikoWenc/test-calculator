@@ -4,21 +4,24 @@ let operatorButton = document.querySelectorAll('.operators button');
 
 // for number buttons
 numbersButton.forEach(element => {
+    // add event to number buttons
+    element.addEventListener('click', (event) => {
+            display.textContent += event.target.value;
+    });
+    
     // for del button
     if (element.value == 'del'){
         element.addEventListener('click', (event) => {
             display.textContent = '';
         })
     };
-    // add event to number buttons
-    element.addEventListener('click', (event) => {
-        if(event.target.value !== 'del') {
-            display.textContent += event.target.value;
-        }
-    });
 });
 
-
+operatorButton.forEach(element => {
+    element.addEventListener('click', (event) => {
+        display.textContent += event.target.value;
+    })
+})
 
 
 let operandA;
