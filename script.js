@@ -5,7 +5,7 @@ let operatorButton = document.querySelectorAll('.operators button');
 document.addEventListener('keydown', (event) => {
     // only numbers will be inputed to display
     (Number(event.key))
-        ? display.textContent = event.key
+        ? display.textContent += event.key
         : event.defaultPrevented;
 
     if (event.key === 'Backspace') display.textContent = '';
