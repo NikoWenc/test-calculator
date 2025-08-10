@@ -4,6 +4,12 @@ let operatorButton = document.querySelectorAll('.operators button');
 
 // for number buttons
 numbersButton.forEach(element => {
+    // for del button
+    if (element.value == 'del'){
+        element.addEventListener('click', (event) => {
+            display.textContent = '';
+        })
+    };
     // add event to number buttons
     element.addEventListener('click', (event) => {
         if(event.target.value !== 'del') {
