@@ -74,3 +74,15 @@ body {
         background-color: rgb(226, 203, 26);
         border: 3px solid black;
     }
+
+
+@media (max-width: 500px) {
+    .calculator{
+        width: 400px;
+    }
+
+    .numbers button {
+    width: 90px;
+    height: 90px;
+    }
+}
